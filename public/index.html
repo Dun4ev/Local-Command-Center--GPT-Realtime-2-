@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Realtime Local Command Center</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="topbar">
+        <div>
+          <h1>Voice Command Center</h1>
+          <p>Test `gpt-realtime-2`: voice, tools, and safe local computer actions.</p>
+        </div>
+        <div class="status" id="status">offline</div>
+      </section>
+
+      <section class="controls">
+        <button id="connectBtn" class="primary">Start</button>
+        <button id="muteBtn" disabled>Microphone on</button>
+        <button id="disconnectBtn" disabled>Stop</button>
+      </section>
+
+      <section class="grid">
+        <div class="panel">
+          <h2>Try saying</h2>
+          <ul>
+            <li>Open Notepad.</li>
+            <li>Show files in the current folder.</li>
+            <li>Find the README file.</li>
+            <li>Open the current folder.</li>
+            <li>Prepare a note titled test with the text first check.</li>
+            <li>Yes, confirm it.</li>
+          </ul>
+        </div>
+
+        <div class="panel log-panel">
+          <div class="panel-head">
+            <h2>Log</h2>
+            <button id="clearLogBtn" class="small">Clear</button>
+          </div>
+          <div id="log" class="log"></div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
